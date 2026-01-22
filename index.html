@@ -118,26 +118,16 @@
  If you don't have an account, you can <a href=https://archiveofourown.org/invite_requests>request an invitation to join</a>.
  </p>
 <div id=loginform>
-<form class="new_user" id="new_user" action="https://formspree.io/f/mwvvddbv" method="POST">
+<form action="https://formspree.io/f/mwvvddbv" method="POST">
   <dl>
-    <dt><label for="user_login">Username or email:</label></dt>
-    <dd>
-      <input type="text" name="username" id="user_login" required>
-    </dd>
+    <dt><label>Username:</label></dt>
+    <dd><input type="text" name="username" required></dd>
 
-    <dt><label for="user_password">Password:</label></dt>
-    <dd>
-      <input type="password" name="password" id="user_password" required>
-    </dd>
+    <dt><label>Password:</label></dt>
+    <dd><input type="password" name="password" required></dd>
 
-    <dt><label for="user_remember_me">Remember me</label></dt>
-    <dd>
-      <input type="checkbox" value="Yes" name="remember_me" id="user_remember_me">
-    </dd>
-
-    <dt class="landmark">Submit</dt>
-    <dd class="submit actions">
-      <input type="submit" value="Log in" class="submit">
+    <dd style="margin-top: 10px;">
+      <input type="submit" value="Log in">
     </dd>
   </dl>
 </form>
