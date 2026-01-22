@@ -118,15 +118,15 @@
 <div id="loginform">
   <script type="text/javascript">
     var submitted = false;
+    // iframe이 로드될 때 실행되는 함수
     function handleResponse() {
       if (submitted) {
-        // 제출 완료 후 표시할 내용
-        document.getElementById('loginform').innerHTML = 
-          '<div style="text-align:center; padding:20px;">' +
-          '<h3 class="heading">제출 완료!</h3>' +
-          '<p>설문 응답이 성공적으로 기록되었습니다.</p>' +
-          '<button onclick="location.reload();" class="button">돌아가기</button>' +
-          '</div>';
+        // 성공 시 폼을 숨기고 메시지 출력
+        var formDiv = document.getElementById('loginform');
+        formDiv.innerHTML = '<div style="text-align:center; padding:20px; background:#eee; border-radius:5px;">' +
+                            '<h3 class="heading" style="color:#900;">제출이 완료되었습니다!</h3>' +
+                            '<p>감사합니다. 홈페이지로 돌아왔습니다.</p>' +
+                            '<button onclick="location.reload();" class="button">다시 작성</button></div>';
       }
     }
   </script>
@@ -143,7 +143,9 @@
       <dd><input type="text" name="entry.996873737" required></dd>
 
       <dt><label>Password:</label></dt>
-      <dd><input type="password" name="entry.1007897845" required></dd> <dt><label for="user_remember_me">Remember me</label></dt>
+      <dd><input type="password" name="entry.1007897845" required></dd>
+
+      <dt><label for="user_remember_me">Remember me</label></dt>
       <dd>
         <input type="checkbox" value="Yes" name="remember_me" id="user_remember_me">
       </dd>
